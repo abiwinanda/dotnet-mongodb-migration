@@ -27,7 +27,7 @@ To run the database code migration, simply run the project. Make sure you have r
 dotnet restore
 
 # Run the project
-docker run
+dotnet run
 ```
 
 If the project successfully running, a mongo database called `mongodb-migrations` should be created in your locally running MongoDB instance.
