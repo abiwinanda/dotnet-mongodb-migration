@@ -1,4 +1,5 @@
 using SampleMongodbMigration.Database;
+using SampleMongodbMigration.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Configure dependency injections
+builder.Services.AddSingleton<MongoContext>();
+builder.Services.AddTransient<StudentService>();
 
 // Run MongoDB migrations
 MongoMigrator.Migrate();

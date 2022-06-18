@@ -18,7 +18,7 @@ public static class MongoMigrator
         MongoMigrationClient.Initialize(client, new MongoMigrationSettings()
         {
             ConnectionString = ConnectionString,
-            Database = Database
+            Database = Database // Database automatically created if not exists yet
         }, new LightInjectAdapter(new LightInject.ServiceContainer()));
     }
 }

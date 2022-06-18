@@ -1,15 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
 using SampleMongodbMigration.Models;
 using SampleMongodbMigration.Services;
-using SampleMongodbUnitTest.Database;
-using SampleMongodbUnitTest.Models;
-using SampleMongodbUnitTest.Services;
 
 namespace SampleMongodbMigration.Controllers;
 

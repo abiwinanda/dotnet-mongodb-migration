@@ -1,8 +1,6 @@
 using MongoDB.Driver;
 using SampleMongodbMigration.Database;
 using SampleMongodbMigration.Models;
-using SampleMongodbUnitTest.Database;
-using SampleMongodbUnitTest.Models;
 
 namespace SampleMongodbMigration.Services;
 
