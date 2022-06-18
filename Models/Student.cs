@@ -14,3 +14,10 @@ public class Student : IDocument
     public string HomeAddress { get; set; } = string.Empty;
     public DocumentVersion Version { get; set; }
 }
+
+public class CreateStudentRequest
+{
+    public string Name { get; set; } = string.Empty;
+    public int Age { get; set; }
+    public string HomeAddress { get; set; } = string.Empty;
+}
