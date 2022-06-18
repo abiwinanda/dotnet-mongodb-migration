@@ -1,3 +1,4 @@
+using Mongo.Migration.Startup.Static;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using Pluralize.NET.Core;
@@ -11,13 +12,13 @@ public class MongoContext
     public MongoContext()
     {
         IMongoClient client = new MongoClient("mongodb://root:password@localhost:27017/admin");
-        _database = client.GetDatabase("unit-test")!;
+        _database = client.GetDatabase("mongodb-migrations")!;
     }
     
     public MongoContext(string connectionString)
     {
         IMongoClient client = new MongoClient(connectionString);
-        _database = client.GetDatabase("unit-test")!;
+        _database = client.GetDatabase("mongodb-migrations")!;
     }
     
     public IMongoCollection<BsonDocument> GetCollection(string entityName)
