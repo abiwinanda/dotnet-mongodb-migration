@@ -7,18 +7,18 @@ namespace SampleMongodbMigration.Database;
 
 public static class MongoMigrator
 {
+    private static string ConnectionString = "mongodb://root:password@localhost:27017/admin";
+    private static string Database = "mongodb-migrations";
+    
     public static void Migrate()
     {
-        IMongoClient client = new MongoClient("mongodb://root:password@localhost:27017/admin");
-        
-        // Create database
-        // client.GetDatabase("mongodb-migrations");
+        IMongoClient client = new MongoClient(ConnectionString);
         
         // Init MongoMigration
         MongoMigrationClient.Initialize(client, new MongoMigrationSettings()
         {
-            ConnectionString = "mongodb://root:password@localhost:27017/admin",
-            Database = "mongodb-migrations"
+            ConnectionString = ConnectionString,
+            Database = Database
         }, new LightInjectAdapter(new LightInject.ServiceContainer()));
     }
 }
