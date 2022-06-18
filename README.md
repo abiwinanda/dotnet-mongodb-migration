@@ -12,7 +12,7 @@ To set up MongoDB locally quickly you could use the existing docker-compose in t
 
 ```sh
 # Create MongoDB container
-docker-compose up -up
+docker-compose up -d
 
 # Check if the container is running
 docker ps
